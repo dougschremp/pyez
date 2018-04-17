@@ -24,8 +24,8 @@ IntView:
 
 username = input("Device username: ")
 password = getpass("Device password: ")
-
 file= input ("Device list file:")
+suffix=input ("domain suffix:")
 with open(file) as fp:  
          hostip = fp.readline().strip()
 #go thru a router
@@ -52,7 +52,7 @@ with open(file) as fp:
                 int=name.replace("/","-")
                 better=int.replace(".","u")
                 host='{}.{}'.format(better,hostname)
-                fqdn='{}.{}'.format(host,"bonet.boston.cob")
+                fqdn='{}.{}'.format(host,suffix)
 
                 if(interface.ip_address and type(interface.ip_address)==str):
                    print (ipaddress.ip_address(interface.ip_address).reverse_pointer,"\tPTR\t",fqdn)
