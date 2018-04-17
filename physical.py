@@ -23,10 +23,10 @@ IntView:
 username = input("Device username: ")
 password = getpass("Device password: ")
 
-file= input ("Device list file:")
+hostip= input ("Device IP:")
 
 
-dev = Device(host='10.255.254.1', user=username, passwd=password)
+dev = Device(host='hostip', user=username, passwd=password)
 dev.open()
 #pprint(dev.facts)
 hostname=dev.facts['hostname']
