@@ -21,13 +21,13 @@ opticView:
     rx_power: optics-diagnostics/rx-signal-avg-optical-power-dbm
 """
 
-#username = input("Device username: ")
-username = sys.argv[1]
-#password = getpass("Device password: ")
-password = sys.argv[2]
+username = input("Device username: ")
+#username = sys.argv[1]
+password = getpass("Device password: ")
+#password = sys.argv[2]
 
-#file= input ("Device list file:")
-file = sys.argv[3]
+file= input ("Device list file:")
+#file = sys.argv[3]
 print("hostname",",","interface-name",",","rx-power")
 
 with open(file) as fp:  
